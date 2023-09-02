@@ -3,7 +3,8 @@
 
 set -e  # Exit immediately if a command fails
 
-sudo apt update || { echo "Failed to update package lists"; exit 1; }
+sudo apt update -y || { echo "Failed to update package lists"; exit 1; } && sudo apt upgrade -y || { echo "Failed to upgrade packages"; exit 1; }
+
 
 sudo apt install -y openjdk-8-jdk || { echo "Failed to install JDK"; exit 1; }
 
