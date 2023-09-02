@@ -5,8 +5,7 @@ set -e  # Exit immediately if a command fails
 
 sudo apt update -y || { echo "Failed to update package lists"; exit 1; } && sudo apt upgrade -y || { echo "Failed to upgrade packages"; exit 1; }
 
-
-sudo apt install -y openjdk-8-jdk || { echo "Failed to install JDK"; exit 1; }
+sudo apt install -y openjdk-17-jre || { echo "Failed to install JDK"; exit 1; }
 
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add - || { echo "Failed to add Jenkins repository key"; exit 1; }
 
