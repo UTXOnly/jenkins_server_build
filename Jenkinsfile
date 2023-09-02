@@ -5,7 +5,7 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    //jenkisn_test4
+                    //jenkisn_test5
                     def buildResult = sh(returnStatus: true, script: "./build.sh")
                     if (buildResult == 0) {
                         echo "Build successful!"
