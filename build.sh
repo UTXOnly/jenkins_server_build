@@ -19,5 +19,7 @@ sudo systemctl start jenkins || { echo "Failed to start Jenkins service"; exit 1
 
 sudo systemctl enable jenkins || { echo "Failed to enable Jenkins service"; exit 1; }
 
+echo "Your jenkins admin password is:"
+
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword || { echo "Failed to print initial Jenkins admin password"; exit 1; }
 
